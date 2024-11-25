@@ -1,4 +1,4 @@
-Jogo do Número Secreto 🎯
+{Jogo do Número Secreto 🎯}
 
 Exibe a mensagem de boas-vindas ao jogador
 alert("Boas Vindas ao Jogo do Número Secreto!");
