@@ -1,10 +1,12 @@
 
 alert("Boas Vindas ao Jogo do Número Secreto!");
-let numeroSecreto = 29; // Sempre colocar uma váriavel com nome claro, para que, quem olhar o código entenda. 
+let numeroMaximo = 5000; 
+// Sempre colocar uma váriavel com nome claro, para que, quem olhar o código entenda. 
+let numeroSecreto = parseInt (Math.random () * numeroMaximo + 1);
 console.log (numeroSecreto);
 let tentativa; 
 let experimento = 1; 
-//let tentativa = prompt("Escolha um número entre 1 e 30.");
+//let tentativa = prompt ("Escolha um número entre 1 e 100.");
 
 
 // Apenas no Console. //
@@ -17,7 +19,7 @@ let experimento = 1;
 
 
 while (tentativa != numeroSecreto) {
-        tentativa = prompt("Escolha um número entre 1 e 30.");
+        tentativa = prompt(`Escolha um número entre 1 e ${numeroMaximo}.`);
 
     if (tentativa == numeroSecreto) {
         break; 
@@ -32,8 +34,12 @@ while (tentativa != numeroSecreto) {
         experimento ++;
         //alert ("Poxa. Você errou.") // bloco de código a ser executado caso a tentativa do usuário seja diferente ao número secreto.
 } }
-if (experimento > 1 ) {
-    alert (`Parabéns! Você descobriu o número secreto, ${numeroSecreto} na sua ${experimento} tentativas !!!`); // bloco de código a ser executado caso a tentativa do usuário seja igual ao número secreto.
-} else{
-    alert (`Parabéns! Você descobriu o número secreto, ${numeroSecreto} na sua ${experimento} tentativa !!!`); // bloco de código a ser executado caso a tentativa do usuário seja igual ao número secreto.
-} 
+
+let palavraTentativa = experimento > 1 ? 'tentativas' : 'tentativa';
+alert (`Parabéns! Você descobriu o número secreto, ${numeroSecreto} com ${experimento} ${palavraTentativa} !!!`); 
+
+// if (experimento > 1 ) {
+   //  alert (`Parabéns! Você descobriu o número secreto, ${numeroSecreto} na sua ${experimento} tentativas !!!`); // bloco de código a ser executado caso a tentativa do usuário seja igual ao número secreto.
+// } else{
+   // alert (`Parabéns! Você descobriu o número secreto, ${numeroSecreto} na sua ${experimento} tentativa !!!`); 
+// } 
