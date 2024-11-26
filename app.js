@@ -20,7 +20,7 @@ while (tentativa != numeroSecreto) {
         tentativa = prompt("Escolha um número entre 1 e 30.");
 
     if (tentativa == numeroSecreto) {
-        alert (`Parabéns! Você descobriu o número secreto, ${numeroSecreto} na sua ${experimento} vez !!!`); // bloco de código a ser executado caso a tentativa do usuário seja igual ao número secreto.
+        break; 
     } else { 
         if (tentativa > numeroSecreto){
             alert (`O número secreto é menor que ${tentativa}`);
@@ -32,5 +32,8 @@ while (tentativa != numeroSecreto) {
         experimento ++;
         //alert ("Poxa. Você errou.") // bloco de código a ser executado caso a tentativa do usuário seja diferente ao número secreto.
 } }
-
-
+if (experimento > 1 ) {
+    alert (`Parabéns! Você descobriu o número secreto, ${numeroSecreto} na sua ${experimento} tentativas !!!`); // bloco de código a ser executado caso a tentativa do usuário seja igual ao número secreto.
+} else{
+    alert (`Parabéns! Você descobriu o número secreto, ${numeroSecreto} na sua ${experimento} tentativa !!!`); // bloco de código a ser executado caso a tentativa do usuário seja igual ao número secreto.
+} 
